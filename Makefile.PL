@@ -43,15 +43,12 @@ unless( $threads::shared::threads_shared ) {
 }
 
 # You've got a Perl binary with ithreads support, this thing
-# might actually work out. But just in case you've got some
-# wierd and wonderful verison of Perl that I haven't seen 
-# before lets put threads into the PREREQ_PM line anyway.
+# might actually work out.
 
 WriteMakefile( 
       'NAME'           => 'Astro::Aladin',
-      'VERSION'        => '2.0.1',
-      'PREREQ_PM'      => { threads => 0.0.5,
-                            threads::shared => 0.90 },
+      'VERSION'        => '2.0.2',
+      'PREREQ_PM'      => { },
       'dist'           => { COMPRESS => "gzip -9f"},
       ($] >= 5.005 ?   
 	( ABSTRACT => 'Perl class giving access to images and catalogues',
